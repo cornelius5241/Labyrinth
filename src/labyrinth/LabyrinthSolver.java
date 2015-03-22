@@ -3,5 +3,13 @@ package labyrinth;
 /**
  * Created by cornelius on 3/19/15.
  */
-public interface LabyrinthSolver {
+public interface LabyrinthSolver<T> {
+
+    public T[][] nextCellToExplore();
+    public void readNextMove();
+    public void interactiveSolve();
+    public void solveDFS();
+    public void solveBFS();
+    public void solveRecursive();
+
 }
