@@ -1,6 +1,10 @@
 package labyrinth;
 
+import javafx.util.Pair;
+
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,6 +20,8 @@ public class IntegerLabyrinth implements LabyrinthModel {
     private int columnCount;
     private Integer[] startCell;
     private Integer[] finnishCell;
+
+    List<Pair<Integer,Integer>> wallList= new ArrayList<Pair<Integer,Integer>>();//for prime's algorithm
 
     final Integer WALL = 1;
     final Integer ROOM = 0;
@@ -35,7 +41,6 @@ public class IntegerLabyrinth implements LabyrinthModel {
         this.rowCount=rowCount;
         this.columnCount=columnCount;
     }
-
 
     public int getRowCount() {
         return rowCount;
@@ -76,41 +81,45 @@ public class IntegerLabyrinth implements LabyrinthModel {
         return (int)(Math.random()*(max-min)+min) ;
     }
 
-    public void randomStartFinnishCell(){
+    public void randomStartCell(){
         int position=randomValue(0,4);
         switch (position){
-            case 0: {//start-up finnish-down
+            case 0: {//up
                 startCell[0] = 0;
                 startCell[1] = randomValue(0, columnCount-1);
-                finnishCell[0] = rowCount-1;
-                finnishCell[1] = randomValue(0, columnCount-1);
             } break;
-            case 1:{//start-right finnish-left
+            case 1:{//right
                 startCell[0] = randomValue(0,rowCount-1);
                 startCell[1] = columnCount-1;
-                finnishCell[0] = randomValue(0,rowCount-1);
-                finnishCell[1] = 0;
             } break;
-            case 2:{//start-down finnish-up
+            case 2:{//down
                 startCell[0] = rowCount-1;
                 startCell[1] = randomValue(0, columnCount-1);
-                finnishCell[0] = 0;
-                finnishCell[1] = randomValue(0, columnCount-1);
             } break;
-            case 3:{//start-left finnish-right
+            case 3:{//left
                 startCell[0] = randomValue(0,rowCount-1);
                 startCell[1] = 0;
-                finnishCell[0] = randomValue(0,rowCount-1);
-                finnishCell[1] =columnCount-1;
             } break;
             default:{}
         }
         labyrinth[startCell[0]][startCell[1]]=START;
-        labyrinth[finnishCell[0]][finnishCell[1]]=FINNISH;
     }
 
-    public void randomWallsRooms(){
-        boolean[][] visited= new boolean[rowCount][columnCount];
+    public void setAllWalls(){
+        for(int i=0;i<rowCount;i++)
+            for ( int j=0;j<columnCount;j++)
+                    labyrinth[i][j]=WALL;
+
+    }
+
+    public void addWallOfCell(int x,int y){
+      //  wallList.add((x,y));
+    }
+
+    public void randomizedPrime(){
+        setAllWalls();
+        randomStartCell();
+
     }
 
     public void initialize(){
@@ -130,7 +139,6 @@ public class IntegerLabyrinth implements LabyrinthModel {
     public void generateLabyrinth(int min,int max) {
         randomSize(min,max);
         initialize();
-        randomStartFinnishCell();
-        randomWallsRooms();
+        randomizedPrime();
     }
 }
