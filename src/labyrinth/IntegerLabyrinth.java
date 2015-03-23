@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class IntegerLabyrinth implements LabyrinthModel {
 
     private Integer[][] labyrinth;
-    private boolean[][] wasHere;
     private int rowCount;
     private int columnCount;
     private Integer[] startCell;
@@ -31,20 +30,12 @@ public class IntegerLabyrinth implements LabyrinthModel {
 
     public IntegerLabyrinth(int rowCount, int columnCount) {
         this.labyrinth = new Integer[rowCount][columnCount];
-        this.wasHere = new boolean[rowCount][columnCount];
         this.startCell=new Integer[2];
         this.finnishCell=new Integer[2];
         this.rowCount=rowCount;
         this.columnCount=columnCount;
-        resetWasHere();
     }
 
-    public void resetWasHere(){
-        for(int i= 0;i<rowCount;i++) {
-            for (int j = 0; j < columnCount; j++)
-                wasHere[i][j] = false;
-        }
-    }
 
     public int getRowCount() {
         return rowCount;
@@ -74,6 +65,11 @@ public class IntegerLabyrinth implements LabyrinthModel {
 
     public void generateLabyrinth(File filename) {
 
+    }
+
+    public void randomSize(int min,int max){
+        this.columnCount=randomValue(min,max);
+        this.rowCount=randomValue(min,max);
     }
 
     public int randomValue(int min, int max) {
@@ -113,12 +109,14 @@ public class IntegerLabyrinth implements LabyrinthModel {
         labyrinth[finnishCell[0]][finnishCell[1]]=FINNISH;
     }
 
+    public void randomWallsRooms(){
+        boolean[][] visited= new boolean[rowCount][columnCount];
+    }
+
     public void initialize(){
         this.labyrinth = new Integer[rowCount][columnCount];
-        this.wasHere = new boolean[rowCount][columnCount];
         this.startCell=new Integer[2];
         this.finnishCell=new Integer[2];
-        resetWasHere();
     }
 
     public void show(){
@@ -130,10 +128,9 @@ public class IntegerLabyrinth implements LabyrinthModel {
     }
 
     public void generateLabyrinth(int min,int max) {
-        this.columnCount=randomValue(min,max);
-        this.rowCount=randomValue(min,max);
+        randomSize(min,max);
         initialize();
         randomStartFinnishCell();
-
+        randomWallsRooms();
     }
 }
