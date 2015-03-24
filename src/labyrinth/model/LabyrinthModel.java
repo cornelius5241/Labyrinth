@@ -7,6 +7,7 @@ import java.io.File;
  * Created by cornelius on 3/19/15.
  */
 public interface LabyrinthModel<T> {
+
     /**
      * @return the number of rows in the maze
      */

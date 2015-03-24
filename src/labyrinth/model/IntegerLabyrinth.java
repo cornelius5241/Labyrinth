@@ -7,7 +7,7 @@ import java.util.Scanner;
  * A labyrinth.model class that uses Integers to carrying data of an implementation of a maze
  * Created by cornelius & anca on 3/22/15.
  */
-public class IntegerLabyrinth implements LabyrinthModel {
+public class IntegerLabyrinth implements LabyrinthModel<Integer> {
 
     final Integer WALL = 1;
     final Integer ROOM = 0;
@@ -30,6 +30,9 @@ public class IntegerLabyrinth implements LabyrinthModel {
         generateLabyrinth(keyboard.nextInt(), keyboard.nextInt());
     }
 
+    /**
+     * Constructor that reads a file and use it's input to create a new maze
+     */
     public IntegerLabyrinth(String filename) {
         this.startCell = new Integer[2];
         this.finishCell = new Integer[2];
@@ -54,8 +57,16 @@ public class IntegerLabyrinth implements LabyrinthModel {
     }
 
     /**
+     * @return the matrix of the maze
+     */
+    public Integer[][] getLabyrinth() {
+        return labyrinth;
+    }
+
+    /**
      * @return the number of rows in the maze
      */
+    @Override
     public int getRowCount() {
         return rowCount;
     }
@@ -63,6 +74,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
     /**
      * @return the number of columns in the maze
      */
+    @Override
     public int getColumnCount() {
         return columnCount;
     }
@@ -72,6 +84,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
      * @param y
      * @return true if the cell at coordinates (x,y) is free (it is a room)
      */
+    @Override
     public boolean isFreeAt(int x, int y) {//first true => 2nd || first false =>third
         if (labyrinth[x][y] == null ? ROOM == null : labyrinth[x][y].equals(ROOM)) return true;
         else return false;
@@ -82,6 +95,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
      * @param y
      * @return true if the cell at coordinates (x,y) is a wall
      */
+    @Override
     public boolean isWallAt(int x, int y) {
         if (labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL)) return true;
         else return false;
@@ -90,6 +104,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
     /**
      * @return a 2 elements vector with the coordinates of the starting maze cell
      */
+    @Override
     public Integer[] getStartCell() {
         return startCell;
     }
@@ -97,6 +112,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
     /**
      * @return a 2 elements vector with the coordinates of the finnish maze cell
      */
+    @Override
     public Integer[] getFinishCell() {
         return finishCell;
     }
@@ -111,6 +127,7 @@ public class IntegerLabyrinth implements LabyrinthModel {
      *
      * @param file
      */
+    @Override
     public void generateLabyrinth(File file) {
         String maze[][] = new String[(int) Math.sqrt(file.length())][];
         int rows = 0;
@@ -220,9 +237,27 @@ public class IntegerLabyrinth implements LabyrinthModel {
      * @param min
      * @param max
      */
+    @Override
     public void generateLabyrinth(int min, int max) {
         randomSize(min, max);
         randomStartFinishCell();
         generator();
     }
+
+    public Integer getFINISH() {
+        return FINISH;
+    }
+
+    public Integer getWALL() {
+        return WALL;
+    }
+
+    public Integer getROOM() {
+        return ROOM;
+    }
+
+    public Integer getSTART() {
+        return START;
+    }
+
 }
