@@ -1,4 +1,4 @@
-package labyrinth;
+package labyrinth.controller;
 
 /**
  * Created by cornelius on 3/19/15.

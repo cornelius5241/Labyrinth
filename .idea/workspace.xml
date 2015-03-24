@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95fa875f-8dfa-4923-a3d8-ff29d743b81a" name="Default" comment="modified random , still need to implement prime's alg">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java" afterPath="$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java" />
+    <list default="true" id="95fa875f-8dfa-4923-a3d8-ff29d743b81a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="DELETED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\LabyrinthModel.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\IntegerLabyrinth.java" afterPath="$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\LabyrinthObserver.java" afterPath="$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\LabyrinthSolver.java" afterPath="$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\LabyrinthView.java" afterPath="$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\Main.java" afterPath="$PROJECT_DIR$/src/labyrinth/main/Main.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\StringLabyrinth.java" afterPath="$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java" />
     </list>
     <ignored path="Labyrinth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,84 +37,90 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegerLabyrinth.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2142">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
-                <element signature="e#128#129#0" expanded="false" />
-                <element signature="e#186#187#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#1593#1594#0" expanded="true" />
+                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#1758#1759#0" expanded="true" />
+                <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#2525#2526#0" expanded="true" />
+                <element signature="e#2557#2558#0" expanded="true" />
+                <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#2694#2695#0" expanded="true" />
+                <element signature="e#2728#2729#0" expanded="true" />
+                <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#3417#3418#0" expanded="true" />
+                <element signature="e#3475#3476#0" expanded="true" />
+                <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabyrinthModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+      <file leaf-file-name="Pair.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/javafx-src.zip!/javafx/util/Pair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabyrinthView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+      <file leaf-file-name="StringLabyrinth.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabyrinthSolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringLabyrinth.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/StringLabyrinth.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabyrinthObserver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegerLabyrinth.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60470587" vertical-offset="712" max-vertical-offset="1564">
-              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.6050847" vertical-offset="1479" max-vertical-offset="2431">
+              <caret line="120" column="68" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#493#516#0" expanded="true" />
-                <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
-                <element signature="method#setAllWalls#0;class#IntegerLabyrinth#0" expanded="false" />
+                <element signature="e#494#500#0" expanded="true" />
+                <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+                <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="19793" max-vertical-offset="26044">
+              <caret line="1232" column="22" selection-start-line="1232" selection-start-column="22" selection-end-line="1232" selection-end-column="22" />
+              <folding>
+                <element signature="e#46394#46395#0" expanded="true" />
+                <element signature="e#46458#46459#0" expanded="true" />
+                <element signature="e#47036#47037#0" expanded="true" />
+                <element signature="e#47092#47093#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,8 +142,14 @@
         <option value="$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/Main.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java" />
+        <option value="$PROJECT_DIR$/src/model/LabyrinthModel.java" />
+        <option value="$PROJECT_DIR$/src/model/IntegerLabyrinth.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/Main.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java" />
       </list>
     </option>
   </component>
@@ -162,8 +182,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,6 +220,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -231,7 +295,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="labyrinth.Main" />
+      <option name="MAIN_CLASS_NAME" value="labyrinth.main.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -437,7 +501,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427041482577</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modified random , still need to implement prime's alg">
+      <created>1427147894368</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1427147894368</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -467,7 +537,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32988167" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -477,18 +546,45 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17715959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3839733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3831361" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39899832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3831361" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17715959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39899832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -511,13 +607,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java</url>
-          <line>79</line>
-          <properties class="labyrinth.IntegerLabyrinth" method="randomValue" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
@@ -527,18 +616,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
@@ -546,7 +624,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -554,7 +632,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -562,15 +640,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/StringLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#500#0" expanded="true" />
+            <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -578,37 +664,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1547">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#500#0" expanded="true" />
+            <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#493#516#0" expanded="true" />
+            <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#setAllWalls#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
@@ -616,7 +806,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -624,7 +814,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -632,15 +822,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/StringLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#500#0" expanded="true" />
+            <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -648,37 +846,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#493#516#0" expanded="true" />
+            <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#setAllWalls#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
@@ -686,7 +897,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -694,7 +905,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="459">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -702,15 +913,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/StringLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#500#0" expanded="true" />
+            <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -718,37 +937,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#493#516#0" expanded="true" />
+            <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#setAllWalls#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="306">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="450">
           <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
@@ -756,7 +988,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="288">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
@@ -764,7 +996,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="378">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
@@ -772,7 +1004,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -780,18 +1012,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="306">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -799,7 +1028,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -807,7 +1036,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="360">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
@@ -815,7 +1044,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -823,18 +1052,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="306">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
@@ -842,7 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
@@ -850,7 +1076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
@@ -858,7 +1084,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -866,72 +1092,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/StringLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="486">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#129#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="504">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.99691355" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+        <state vertical-scroll-proportion="0.2361111" vertical-offset="0" max-vertical-offset="648">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+        <state vertical-scroll-proportion="0.2361111" vertical-offset="0" max-vertical-offset="648">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60470587" vertical-offset="712" max-vertical-offset="1564">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/javafx-src.zip!/javafx/util/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19793" max-vertical-offset="26044">
+          <caret line="1232" column="22" selection-start-line="1232" selection-start-column="22" selection-end-line="1232" selection-end-column="22" />
+          <folding>
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46458#46459#0" expanded="true" />
+            <element signature="e#47036#47037#0" expanded="true" />
+            <element signature="e#47092#47093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#493#516#0" expanded="true" />
+            <element signature="docComment;method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
             <element signature="method#IntegerLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
-            <element signature="method#setAllWalls#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getRowCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="docComment;method#getColumnCount#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="docComment;method#isFreeAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#isWallAt#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#getStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="docComment;method#getFinishCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="docComment;method#generateLabyrinth#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomSize#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#IntegerLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#generateLabyrinth#1;class#IntegerLabyrinth#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6050847" vertical-offset="1479" max-vertical-offset="2431">
+          <caret line="120" column="68" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#500#0" expanded="true" />
+            <element signature="docComment;method#randomSize#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="docComment;method#randomValue#0;class#StringLabyrinth#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="docComment;method#randomStartCell#0;class#StringLabyrinth#0" expanded="false" />
           </folding>
         </state>
       </provider>

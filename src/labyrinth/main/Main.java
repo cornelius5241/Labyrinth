@@ -1,4 +1,6 @@
-package labyrinth;
+package labyrinth.main;
+
+import labyrinth.model.IntegerLabyrinth;
 
 /**
  * Created by cornelius on 3/19/15.
