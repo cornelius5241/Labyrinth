@@ -8,6 +8,10 @@ import labyrinth.model.IntegerLabyrinth;
 public class Main {
 
     public static void main(String[] args) {
-        IntegerLabyrinth X =new IntegerLabyrinth();
+
+        IntegerLabyrinth X = new IntegerLabyrinth("D:\\UAIC - Computer Science\\UAIC\\AnII-Sem2\\PA-Java\\Labyrinth\\src\\labyrinth\\model\\input.txt");
+        IntegerLabyrinth Y = new IntegerLabyrinth(25, 50);
+        IntegerLabyrinth Z = new IntegerLabyrinth();
+
     }
 }

@@ -48,9 +48,9 @@ public interface LabyrinthModel<T> {
     /**
      * uses the file given as a parameter to generate a maze from the input of the file
      *
-     * @param filename
+     * @param file
      */
-    public void generateLabyrinth(File filename);
+    public void generateLabyrinth(File file);
 
     /**
      * generates a random maze with it's size between the min and max values
