@@ -11,12 +11,12 @@ public interface LabyrinthModel<T> {
     /**
      * @return the number of rows in the maze
      */
-    public int getRowCount();
+    public int getHeight();
 
     /**
      * @return the number of columns in the maze
      */
-    public int getColumnCount();
+    public int getWidth();
 
     /**
      * tests if the cell at coordinates (x,y) is free (a room of the maze)
@@ -26,6 +26,33 @@ public interface LabyrinthModel<T> {
      * @return true if so , false if not
      */
     public boolean isFreeAt(int x, int y);
+
+    /**
+     * tests if the cell at coordinates (x,y) is a the start position
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    public boolean isStartAt(int x, int y);
+
+    /**
+     * tests if the cell at coordinates (x,y) is the finish position
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    public boolean isFinishAt(int x, int y);
+
+    /**
+     * tests if the cell at coordinates (x,y) is a path for solver of the labyrinth
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    public boolean isPathAt(int x, int y);
 
     /**
      * tests if the cell at coordinates (x,y) is a wall

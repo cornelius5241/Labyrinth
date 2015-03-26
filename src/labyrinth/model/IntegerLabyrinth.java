@@ -1,5 +1,7 @@
 package labyrinth.model;
 
+import labyrinth.generator.RosettaCodeLabyrinthGenerator;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -13,9 +15,10 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     final Integer ROOM = 0;
     final Integer START = -1;
     final Integer FINISH = 2;
+    final Integer PATH = 3;
     private Integer[][] labyrinth;
-    private int rowCount;
-    private int columnCount;
+    private int height;
+    private int width;
     private Integer[] startCell;
     private Integer[] finishCell;
 
@@ -31,7 +34,20 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     }
 
     /**
+     * Constructor that receive a matrix of integers as a param
+     *
+     * @param labyrinth
+     */
+    public IntegerLabyrinth(Integer[][] labyrinth) {
+        this.labyrinth = labyrinth;
+        this.height = labyrinth.length;
+        this.width = labyrinth[0].length;
+    }
+
+    /**
      * Constructor that reads a file and use it's input to create a new maze
+     *
+     * @param filename
      */
     public IntegerLabyrinth(String filename) {
         this.startCell = new Integer[2];
@@ -43,17 +59,15 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * Basic constructor that uses the params to set the dimensions
      * it has random elements
      *
-     * @param rowCount
-     * @param columnCount
+     * @param height
+     * @param width
      */
-    public IntegerLabyrinth(int rowCount, int columnCount) {
-        this.labyrinth = new Integer[rowCount][columnCount];
+    public IntegerLabyrinth(int height, int width) {
         this.startCell = new Integer[2];
         this.finishCell = new Integer[2];
-        this.rowCount = rowCount;
-        this.columnCount = columnCount;
-        randomStartFinishCell();
-        generator();
+        this.height = height;
+        this.width = width;
+        generateLabyrinth(height, width);
     }
 
     /**
@@ -67,16 +81,16 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * @return the number of rows in the maze
      */
     @Override
-    public int getRowCount() {
-        return rowCount;
+    public int getHeight() {
+        return this.height;
     }
 
     /**
      * @return the number of columns in the maze
      */
     @Override
-    public int getColumnCount() {
-        return columnCount;
+    public int getWidth() {
+        return this.width;
     }
 
     /**
@@ -91,6 +105,26 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     }
 
     /**
+     * Unset the path and insert a room at the specified cell
+     *
+     * @param cell
+     */
+    public void unsetPathAt(Integer[] cell) {
+        labyrinth[cell[0]][cell[1]] = ROOM;
+    }
+
+    /**
+     * @param x
+     * @param y
+     * @return true if the cell at coordinates (x,y) is the start position
+     */
+    @Override
+    public boolean isStartAt(int x, int y) {
+        if (labyrinth[x][y] == null ? START == null : labyrinth[x][y].equals(START)) return true;
+        else return false;
+    }
+
+    /**
      * @param x
      * @param y
      * @return true if the cell at coordinates (x,y) is a wall
@@ -98,6 +132,37 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     @Override
     public boolean isWallAt(int x, int y) {
         if (labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL)) return true;
+        else return false;
+    }
+
+    /**
+     * @param x
+     * @param y
+     * @return true if the cell at coordinates (x,y) is a path
+     */
+    @Override
+    public boolean isPathAt(int x, int y) {
+        if (labyrinth[x][y] == null ? PATH == null : labyrinth[x][y].equals(PATH)) return true;
+        else return false;
+    }
+
+    /**
+     * sets a path to the specified cell
+     *
+     * @param cell
+     */
+    public void setPathAt(Integer[] cell) {
+        labyrinth[cell[0]][cell[1]] = PATH;
+    }
+
+    /**
+     * @param x
+     * @param y
+     * @return true if the cell at coordinates (x,y) is the finish position
+     */
+    @Override
+    public boolean isFinishAt(int x, int y) {
+        if (labyrinth[x][y] == null ? FINISH == null : labyrinth[x][y].equals(FINISH)) return true;
         else return false;
     }
 
@@ -140,9 +205,9 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
                     maze[rows++] = line.split(" ");
                 }
                 br.close();
-                this.rowCount = rows;
-                this.columnCount = maze[0].length;
-                this.labyrinth = new Integer[rowCount][columnCount];
+                this.height = rows;
+                this.width = maze[0].length;
+                this.labyrinth = new Integer[height][width];
                 for (int i = 0; i < rows; i++)
                     for (int j = 0; j < maze[i].length; j++)
                         labyrinth[i][j] = Integer.parseInt(maze[i][j]);
@@ -162,9 +227,8 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * @param max
      */
     public void randomSize(int min, int max) {
-        this.columnCount = randomValue(min, max);
-        this.rowCount = randomValue(min, max);
-        this.labyrinth = new Integer[rowCount][columnCount];
+        this.width = randomValue(min, max);
+        this.height = randomValue(min, max);
     }
 
     /**
@@ -180,37 +244,38 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
 
     /**
      * randomize the selection of the starting and finishing cell of the maze
-     * it will be selected to be on the frontier of the maze and opposite one of each other
+     * it will be selected to be on the corner of the maze and opposite one of each other
+     * edit!
      */
     public void randomStartFinishCell() {
         int position = randomValue(0, 4);
         switch (position) {
-            case 0: {//S-up F-down
+            case 0: {//S-NV F-SE
                 startCell[0] = 0;
-                startCell[1] = randomValue(0, columnCount - 1);
-                finishCell[0] = rowCount - 1;
-                finishCell[1] = randomValue(0, columnCount - 1);
+                startCell[1] = 0;
+                finishCell[0] = height - 1;
+                finishCell[1] = width - 1;
             }
             break;
-            case 1: {//S-right F-left
-                startCell[0] = randomValue(0, rowCount - 1);
-                startCell[1] = columnCount - 1;
-                finishCell[0] = randomValue(0, rowCount - 1);
+            case 1: {//S-NE F-SV
+                startCell[0] = 0;
+                startCell[1] = width - 1;
+                finishCell[0] = height - 1;
                 finishCell[1] = 0;
             }
             break;
-            case 2: {//S-down F-up
-                startCell[0] = rowCount - 1;
-                startCell[1] = randomValue(0, columnCount - 1);
+            case 2: {//S-SE F-NV
+                startCell[0] = height - 1;
+                startCell[1] =  width - 1;
                 finishCell[0] = 0;
-                finishCell[1] = randomValue(0, columnCount - 1);
+                finishCell[1] = 0;
             }
             break;
-            case 3: {//S-left F-right
-                startCell[0] = randomValue(0, rowCount - 1);
+            case 3: {//S-SV F-NE
+                startCell[0] = height-1;
                 startCell[1] = 0;
-                finishCell[0] = randomValue(0, rowCount - 1);
-                finishCell[1] = columnCount - 1;
+                finishCell[0] = 0;
+                finishCell[1] = width - 1;
             }
             break;
             default: {
@@ -220,19 +285,9 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
         labyrinth[finishCell[0]][finishCell[1]] = FINISH;
     }
 
-    /**
-     * random generates the walls and the rooms of the labyrinth
-     */
-    public void generator() {
-        for (int i = 0; i < this.rowCount; i++)
-            for (int j = 0; j < this.columnCount; j++) {
-                if (labyrinth[i][j] != START && labyrinth[i][j] != FINISH)
-                    labyrinth[i][j] = randomValue(0, 2);
-            }
-    }
 
     /**
-     * the random maze generator method
+     * the random maze generator method using Rosseta code
      *
      * @param min
      * @param max
@@ -240,8 +295,11 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     @Override
     public void generateLabyrinth(int min, int max) {
         randomSize(min, max);
+        RosettaCodeLabyrinthGenerator RCLG = new RosettaCodeLabyrinthGenerator(height, width);
+        this.labyrinth = RCLG.parseToInteger();
+        this.height = labyrinth.length;
+        this.width = labyrinth[0].length;
         randomStartFinishCell();
-        generator();
     }
 
     public Integer getFINISH() {
@@ -258,6 +316,10 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
 
     public Integer getSTART() {
         return START;
+    }
+
+    public Integer getPATH() {
+        return PATH;
     }
 
 }

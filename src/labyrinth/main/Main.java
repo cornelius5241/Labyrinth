@@ -3,8 +3,6 @@ package labyrinth.main;
 import labyrinth.controller.IntegerLabyrinthSolver;
 import labyrinth.model.IntegerLabyrinth;
 
-import java.util.Scanner;
-
 /**
  * Created by cornelius on 3/19/15.
  */
@@ -12,16 +10,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        IntegerLabyrinth X = new IntegerLabyrinth("D:\\UAIC - Computer Science\\UAIC\\AnII-Sem2\\PA-Java\\Labyrinth\\src\\labyrinth\\model\\input.txt");
-        IntegerLabyrinth Z = new IntegerLabyrinth();
-        int ans = 1;
+        // IntegerLabyrinth X = new IntegerLabyrinth("");
+        // IntegerLabyrinth Z = new IntegerLabyrinth();
 
-        while (ans != 0) {
-            IntegerLabyrinth Y = new IntegerLabyrinth(15, 15);
+        IntegerLabyrinth Y = new IntegerLabyrinth(10, 10);
             IntegerLabyrinthSolver ILS = new IntegerLabyrinthSolver(Y);
             ILS.updateView();
-            Scanner keyboard = new Scanner(System.in);
-            ans = keyboard.nextInt();
-        }
+        ILS.interactiveSolve();
+
+       /* RosettaCodeLabyrinthGenerator RCLG = new RosettaCodeLabyrinthGenerator(5, 5);
+        System.out.print(RCLG.parseToString());
+        RCLG.display();
+        RCLG.parseToInteger();
+       // RCLG.print();*/
     }
 }
