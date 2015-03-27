@@ -1,7 +1,5 @@
 package labyrinth.model;
 
-import java.io.File;
-
 /**
  * Interface labyrinth.model class for carrying data of a maze(labyrinth)
  * Created by cornelius on 3/19/15.
@@ -66,26 +64,18 @@ public interface LabyrinthModel<T> {
     /**
      * @return the coordinates of the starting cell of the maze
      */
-    public T[] getStartCell();
+    public int[] getStartCell();
 
     /**
      * @return the coordinates of the finishing cell of the maze
      */
-    public T[] getFinishCell();
+    public int[] getFinishCell();
+
 
     /**
-     * uses the file given as a parameter to generate a maze from the input of the file
+     * generates a  maze
      *
-     * @param file
      */
-    public void generateLabyrinth(File file);
-
-    /**
-     * generates a random maze with it's size between the min and max values
-     *
-     * @param min
-     * @param max
-     */
-    public void generateLabyrinth(int min, int max);
+    public void generateLabyrinth();
 
 }

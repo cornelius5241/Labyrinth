@@ -5,7 +5,9 @@ import labyrinth.observer.IntegerLabyrinthObserver;
 import labyrinth.observer.LabyrinthObserver;
 import labyrinth.view.IntegerLabyrinthView;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Created by Cornelius on 24.03.2015.
@@ -15,10 +17,9 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
     private final LabyrinthObserver MUTEX = new IntegerLabyrinthObserver();
     private IntegerLabyrinth model;
     private IntegerLabyrinthView view;
-    private List<LabyrinthObserver> observers;
     private boolean solved;
     private Map<Integer, Integer> solvingPath;
-    private Integer[] startCell;
+    private int[] startCell;
     private boolean changed;
 
     /**
@@ -31,7 +32,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
         this.model = model;
         this.view = view;
         this.solved = false;
-        this.startCell = new Integer[2];
+        this.startCell = new int[2];
     }
 
     /**
@@ -41,7 +42,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
         this.model = new IntegerLabyrinth();
         this.view = new IntegerLabyrinthView();
         this.solved = false;
-        this.startCell = new Integer[2];
+        this.startCell = new int[2];
     }
 
     /**
@@ -53,12 +54,13 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
         this.model = model;
         this.view = new IntegerLabyrinthView();
         this.solved = false;
-        this.startCell = new Integer[2];
+        this.startCell = new int[2];
     }
 
     /**
      * updates the view class with the model
      */
+    @Override
     public void updateView() {
         view.show(model);
     }
@@ -68,6 +70,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      *
      * @return true if so
      */
+    @Override
     public boolean isSolved() {
         return solved;
     }
@@ -76,7 +79,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      * @return the next cell to be explored for the solving of the maze
      */
     @Override
-    public Integer[] nextCellToExplore(char move, Integer[] previousCell) {
+    public int[] nextCellToExplore(char move, int[] previousCell) {
         switch (move) {
             case 'u': {
                 return up(previousCell);
@@ -107,27 +110,35 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
         return keyboard.next().charAt(0);
     }
 
-    public void addPath(Integer[] cell) {
+    public void addPath(int[] cell) {
         solvingPath.put(cell[0], cell[1]);
         this.model.setPathAt(cell);
     }
 
-    public void removePath(Integer[] cell) {
+    public void removePath(int[] cell) {
+        if (cell[0] == this.model.getStartCell()[0] && cell[1] == this.model.getStartCell()[1]) return;
         solvingPath.remove(cell[0], cell[1]);
         this.model.unsetPathAt(cell);
     }
 
+    /**
+     * interactive method to solve the maze
+     */
     @Override
-    public void interactiveSolve() {
+    public void solve() {
         this.startCell = this.model.getStartCell();
         this.solvingPath = new HashMap<Integer, Integer>();
         solvingPath.put(startCell[0], startCell[1]);
-        Integer[] previousCell = new Integer[2];
+        int[] previousCell = new int[2];
         previousCell[0] = startCell[0];
         previousCell[1] = startCell[1];
         while (!isSolved()) {
-            Integer[] currentCell = nextCellToExplore(readNextMove(), previousCell);
+            int[] currentCell = nextCellToExplore(readNextMove(), previousCell);
             if (currentCell != null) {
+                if (currentCell[0] == this.model.getFinishCell()[0] && currentCell[1] == this.model.getFinishCell()[1]) {
+                    solved = true;
+                    continue;
+                }
                 if (solvingPath.containsKey(currentCell[0]) && (solvingPath.get(currentCell[0]) == currentCell[1])) {
                     removePath(currentCell);
                 } else {
@@ -139,21 +150,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
                 this.updateView();
             } else System.out.println("Wrong command ,try again");
         }
-    }
-
-    @Override
-    public void solveDFS() {
-
-    }
-
-    @Override
-    public void solveBFS() {
-
-    }
-
-    @Override
-    public void solveRecursive() {
-
+        System.out.println("Congratulations:You have finished the labyrinth. Zeus would be proud!");
     }
 
     /**
@@ -163,8 +160,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      * @return the next cell that is just under the cell given as parameter
      */
     @Override
-    public Integer[] down(Integer[] previousCell) {
-        Integer[] newCell = new Integer[2];
+    public int[] down(int[] previousCell) {
+        int[] newCell = new int[2];
         newCell[0] = previousCell[0] + 1;
         newCell[1] = previousCell[1];
         if (newCell[0] > this.model.getHeight()) {
@@ -184,11 +181,11 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      * @return the next cell that is just above the cell given as parameter
      */
     @Override
-    public Integer[] up(Integer[] previousCell) {
-        Integer[] newCell = new Integer[2];
+    public int[] up(int[] previousCell) {
+        int[] newCell = new int[2];
         newCell[0] = previousCell[0] - 1;
         newCell[1] = previousCell[1];
-        if (newCell[0] < 0) {
+        if (newCell[0] < 0 || newCell[1] < 0) {
             System.out.println("Maze row out of bound");
             return null;
         }
@@ -205,8 +202,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      * @return the next cell that is just in the right of the cell given as parameter
      */
     @Override
-    public Integer[] right(Integer[] previousCell) {
-        Integer[] newCell = new Integer[2];
+    public int[] right(int[] previousCell) {
+        int[] newCell = new int[2];
         newCell[0] = previousCell[0];
         newCell[1] = previousCell[1] + 1;
         if (newCell[1] > this.model.getHeight()) {
@@ -226,8 +223,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      * @return the next cell that is just in the left of the cell given as parameter
      */
     @Override
-    public Integer[] left(Integer[] previousCell) {
-        Integer[] newCell = new Integer[2];
+    public int[] left(int[] previousCell) {
+        int[] newCell = new int[2];
         newCell[0] = previousCell[0];
         newCell[1] = previousCell[1] - 1;
         if (newCell[1] < 0) {
@@ -247,10 +244,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      */
     @Override
     public void register(LabyrinthObserver observer) {
-        if (observer == null) throw new NullPointerException("Null Observer");
-        synchronized (MUTEX) {
-            if (!observers.contains(observer)) observers.add(observer);
-        }
+
     }
 
     /**
@@ -260,9 +254,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      */
     @Override
     public void unregister(LabyrinthObserver observer) {
-        synchronized (MUTEX) {
-            observers.remove(observer);
-        }
+
     }
 
     /**
@@ -270,9 +262,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      */
     @Override
     public void unregister() {
-        synchronized (MUTEX) {
-            observers.clear();
-        }
+
     }
 
     /**
@@ -280,27 +270,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
      */
     @Override
     public void notifyObservers() {
-        List<LabyrinthObserver> observersLocal = null;
-        //synchronization is used to make sure any observer registered after message is received is not notified
-        synchronized (MUTEX) {
-            if (!changed)
-                return;
-            observersLocal = new ArrayList<LabyrinthObserver>(this.observers);
-            this.changed = false;
-        }
-        for (LabyrinthObserver observer : observersLocal) {
-            observer.update();
-        }
+
     }
 
-    /**
-     * method to get updates from subject
-     *
-     * @param observer
-     * @return
-     */
-    @Override
-    public Object getUpdate(LabyrinthObserver observer) {
-        return null;
-    }
+
 }

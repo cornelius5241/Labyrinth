@@ -1,149 +1,233 @@
 package labyrinth.model;
 
-import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.List;
+import labyrinth.generator.FileLabyrinthGenerator;
 
 /**
  * Created by cornelius on 3/22/15.
  */
-public class StringLabyrinth {
+public class StringLabyrinth implements LabyrinthModel<String> {
 
-    private String[][] labyrinth;
-    private int rowCount;
-    private int columnCount;
+    final char WALL = '#';
+    final char ROOM = 'o';
+    final char START = 'X';
+    final char FINISH = 'Y';
+    final char PATH = '*';
+    private char[][] labyrinth;
+    private int height;
+    private int width;
     private int[] startCell;
     private int[] finishCell;
-    final String WALL = "#";
-    final String ROOM = "0";
-    final String START = "*";
-    final String FINISH = "X";
-    private List<Cell> frontier = new ArrayList<Cell>();
+    private String filename;
 
-    /**
-     * set 2 random values as the width and height of the maze between the min and the max params
-     * @param min
-     * @param max
-     */
-    public void randomSize(int min,int max){
-        this.columnCount=randomValue(min,max);
-        this.rowCount=randomValue(min,max);
-        this.labyrinth = new String[rowCount][columnCount];
+    public StringLabyrinth(String filename) {
+        startCell = new int[2];
+        finishCell = new int[2];
+        this.filename = filename;
+        generateLabyrinth();
     }
+
+
+    public char[][] getLabyrinth() {
+        return labyrinth;
+    }
+
+
+    public char getROOM() {
+        return ROOM;
+    }
+
+    public char getPATH() {
+        return PATH;
+    }
+
 
     /**
      * uses the min and max params
+     *
      * @param min
      * @param max
      * @return a random int value between the params
      */
     public int randomValue(int min, int max) {
-        return (int)(Math.random()*(max-min)+min) ;
+        return (int) (Math.random() * (max - min) + min);
     }
 
     /**
-     * randomize the selection of the starting cell of the maze
-     * it will be selected to be on the frontier of the maze
+     * randomize the selection of the starting and finishing cell of the maze
+     * it will be selected to be on the corner of the maze and opposite one of each other
+     * edit!
      */
-    public void randomStartCell(){
-        int position=randomValue(0,4);
-        switch (position){
-            case 0: {//up
+    public void randomStartFinishCell() {
+        int position = randomValue(0, 4);
+        switch (position) {
+            case 0: {//S-NV F-SE
                 startCell[0] = 0;
-                startCell[1] = randomValue(0, columnCount-1);
-            } break;
-            case 1:{//right
-                startCell[0] = randomValue(0,rowCount-1);
-                startCell[1] = columnCount-1;
-            } break;
-            case 2:{//down
-                startCell[0] = rowCount-1;
-                startCell[1] = randomValue(0, columnCount-1);
-            } break;
-            case 3:{//left
-                startCell[0] = randomValue(0,rowCount-1);
                 startCell[1] = 0;
-            } break;
-            default:{}
+                finishCell[0] = height - 1;
+                finishCell[1] = width - 1;
+            }
+            break;
+            case 1: {//S-NE F-SV
+                startCell[0] = 0;
+                startCell[1] = width - 1;
+                finishCell[0] = height - 1;
+                finishCell[1] = 0;
+            }
+            break;
+            case 2: {//S-SE F-NV
+                startCell[0] = height - 1;
+                startCell[1] = width - 1;
+                finishCell[0] = 0;
+                finishCell[1] = 0;
+            }
+            break;
+            case 3: {//S-SV F-NE
+                startCell[0] = height - 1;
+                startCell[1] = 0;
+                finishCell[0] = 0;
+                finishCell[1] = width - 1;
+            }
+            break;
+            default: {
+            }
         }
-        labyrinth[startCell[0]][startCell[1]]=START;
+        labyrinth[startCell[0]][startCell[1]] = START;
+        labyrinth[finishCell[0]][finishCell[1]] = FINISH;
     }
 
     /**
-     * set all the cells from the maze to be walls
-     * used in the Prime's algorithm for random maze generator
+     * @return the number of rows in the maze
      */
-    public void setAllWalls(){
-     //   for(int i=0;i<rowCount;i++)
-      //      for ( int j=0;j<columnCount;j++)
-
-
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     /**
-     * adds the neighbour walls of the cell at the coordinates (x,y) in the list of walls
-     * used in the Prime's algorithm for random maze generator
+     * @return the number of columns in the maze
+     */
+    @Override
+    public int getWidth() {
+        return width;
+    }
+
+    /**
+     * tests if the cell at coordinates (x,y) is free (a room of the maze)
+     *
      * @param x
      * @param y
+     * @return true if so , false if not
      */
-    public void addWallOfCell(int x,int y){
-        for(int i=-1;i<=1;i++)
-            for(int j=-1;j<=1;j++){
-                if(i==0&&j==0||i!=0&&j!=0)//ignore coordinates of the cell
-                    continue;
-                try{
-                    if(labyrinth[x+i][y+j].equals(ROOM)) continue;
-                }catch(Exception e){ // ignore ArrayIndexOutOfBounds
-                    continue;
-                }
-                // add eligible walls to frontier
-                //frontier.add(new Pair(x+i,y+j));
-            }
+    @Override
+    public boolean isFreeAt(int x, int y) {
+        try {
+            if (Character.compare(labyrinth[x][y], ROOM) == 0) return true;
+            else return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incorrect coordinates");
+            return false;
+        }
     }
-/*
-    public int[] opposite(int x,int y){
-        if(this.r.compareTo(parent.r)!=0)
-            return new Point(this.r+this.r.compareTo(parent.r),this.c,this);
-        if(this.c.compareTo(parent.c)!=0)
-            return new Point(this.r,this.c+this.c.compareTo(parent.c),this);
-        return null;
-    }*/
 
     /**
-     *Prime's algorithm for random maze generator
+     * tests if the cell at coordinates (x,y) is a the start position
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
      */
-    public void randomizedPrime(){
-        setAllWalls();
-        randomStartCell();
-        addWallOfCell(startCell[0],startCell[1]);
-        while(!frontier.isEmpty()){
-            Cell wall=frontier.remove(randomValue(0,frontier.size()));
-            //wall
+    @Override
+    public boolean isStartAt(int x, int y) {
+        try {
+            if (Character.compare(labyrinth[x][y], START) == 0) return true;
+            else return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incorrect coordinates");
+            return false;
         }
     }
 
-    static class Cell{
-        Integer row;
-        Integer column;
-        Cell parent;
-        public Cell(int x, int y, Cell p){
-            row=x;
-            column=y;
-            parent=p;
+    /**
+     * tests if the cell at coordinates (x,y) is the finish position
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    @Override
+    public boolean isFinishAt(int x, int y) {
+        try {
+            if (Character.compare(labyrinth[x][y], FINISH) == 0) return true;
+            else return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incorrect coordinates");
+            return false;
         }
+    }
 
-        /**
-         * compute opposite cell given that it is in the other direction from the parent
-         * @return the opposite cell
-         */
-        public Cell opposite(){
-            if(this.row.compareTo(parent.row)!=0)
-                return new Cell(this.row+this.row.compareTo(parent.row),this.column,this);
-            if(this.column.compareTo(parent.column)!=0)
-                return new Cell(this.row,this.column+this.column.compareTo(parent.column),this);
-            return null;
+    /**
+     * tests if the cell at coordinates (x,y) is a path for solver of the labyrinth
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    @Override
+    public boolean isPathAt(int x, int y) {
+        try {
+            if (Character.compare(labyrinth[x][y], PATH) == 0) return true;
+            else return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incorrect coordinates");
+            return false;
         }
+    }
+
+    /**
+     * tests if the cell at coordinates (x,y) is a wall
+     *
+     * @param x
+     * @param y
+     * @return true if so , false if not
+     */
+    @Override
+    public boolean isWallAt(int x, int y) {
+        try {
+            if (Character.compare(labyrinth[x][y], WALL) == 0) return true;
+            else return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incorrect coordinates");
+            return false;
+        }
+    }
+
+    /**
+     * @return the coordinates of the starting cell of the maze
+     */
+    @Override
+    public int[] getStartCell() {
+        return startCell;
+    }
+
+    /**
+     * @return the coordinates of the finishing cell of the maze
+     */
+    @Override
+    public int[] getFinishCell() {
+        return finishCell;
+    }
+
+    /**
+     * generates a  maze
+     */
+    @Override
+    public void generateLabyrinth() {
+        FileLabyrinthGenerator FLG = new FileLabyrinthGenerator(filename);
+        this.labyrinth = FLG.getLabyrinth();
+        this.height = labyrinth.length;
+        this.width = labyrinth[0].length;
+        randomStartFinishCell();
     }
 
 }

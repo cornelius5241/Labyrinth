@@ -2,7 +2,6 @@ package labyrinth.model;
 
 import labyrinth.generator.RosettaCodeLabyrinthGenerator;
 
-import java.io.*;
 import java.util.Scanner;
 
 /**
@@ -19,18 +18,16 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     private Integer[][] labyrinth;
     private int height;
     private int width;
-    private Integer[] startCell;
-    private Integer[] finishCell;
+    private int[] startCell;
+    private int[] finishCell;
 
     /**
      * Constructor that uses 2 values inserted from the keyboard to automatically generate a new maze
      */
     public IntegerLabyrinth() {
-        this.startCell = new Integer[2];
-        this.finishCell = new Integer[2];
-        System.out.println("Insert the minimum and the maximum values for the labyrinth dimensions:");
-        Scanner keyboard = new Scanner(System.in);
-        generateLabyrinth(keyboard.nextInt(), keyboard.nextInt());
+        this.startCell = new int[2];
+        this.finishCell = new int[2];
+        generateLabyrinth();
     }
 
     /**
@@ -45,17 +42,6 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
     }
 
     /**
-     * Constructor that reads a file and use it's input to create a new maze
-     *
-     * @param filename
-     */
-    public IntegerLabyrinth(String filename) {
-        this.startCell = new Integer[2];
-        this.finishCell = new Integer[2];
-        generateLabyrinth(new File(filename));
-    }
-
-    /**
      * Basic constructor that uses the params to set the dimensions
      * it has random elements
      *
@@ -63,11 +49,11 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * @param width
      */
     public IntegerLabyrinth(int height, int width) {
-        this.startCell = new Integer[2];
-        this.finishCell = new Integer[2];
+        this.startCell = new int[2];
+        this.finishCell = new int[2];
         this.height = height;
         this.width = width;
-        generateLabyrinth(height, width);
+        generateLabyrinth();
     }
 
     /**
@@ -109,7 +95,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      *
      * @param cell
      */
-    public void unsetPathAt(Integer[] cell) {
+    public void unsetPathAt(int[] cell) {
         labyrinth[cell[0]][cell[1]] = ROOM;
     }
 
@@ -131,8 +117,13 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      */
     @Override
     public boolean isWallAt(int x, int y) {
-        if (labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL)) return true;
-        else return false;
+        try {
+            if (labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL)) return true;
+            else return false;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Can't go there, you might fall");
+            return true;
+        }
     }
 
     /**
@@ -142,8 +133,13 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      */
     @Override
     public boolean isPathAt(int x, int y) {
-        if (labyrinth[x][y] == null ? PATH == null : labyrinth[x][y].equals(PATH)) return true;
-        else return false;
+        try {
+            if (labyrinth[x][y] == null ? PATH == null : labyrinth[x][y].equals(PATH)) return true;
+            else return false;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Can't go there, you might fall");
+            return false;
+        }
     }
 
     /**
@@ -151,8 +147,12 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      *
      * @param cell
      */
-    public void setPathAt(Integer[] cell) {
-        labyrinth[cell[0]][cell[1]] = PATH;
+    public void setPathAt(int[] cell) {
+        try {
+            labyrinth[cell[0]][cell[1]] = PATH;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Imposible to reach path");
+        }
     }
 
     /**
@@ -170,7 +170,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * @return a 2 elements vector with the coordinates of the starting maze cell
      */
     @Override
-    public Integer[] getStartCell() {
+    public int[] getStartCell() {
         return startCell;
     }
 
@@ -178,47 +178,10 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
      * @return a 2 elements vector with the coordinates of the finnish maze cell
      */
     @Override
-    public Integer[] getFinishCell() {
+    public int[] getFinishCell() {
         return finishCell;
     }
 
-    public File readFile() {
-        Scanner keyboard = new Scanner(System.in);
-        return new File(keyboard.nextLine());
-    }
-
-    /**
-     * reads a file and generates a maze from it
-     *
-     * @param file
-     */
-    @Override
-    public void generateLabyrinth(File file) {
-        String maze[][] = new String[(int) Math.sqrt(file.length())][];
-        int rows = 0;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line;
-            try {
-                while ((line = br.readLine()) != null) {
-                    maze[rows] = new String[line.split(" ").length];
-                    maze[rows++] = line.split(" ");
-                }
-                br.close();
-                this.height = rows;
-                this.width = maze[0].length;
-                this.labyrinth = new Integer[height][width];
-                for (int i = 0; i < rows; i++)
-                    for (int j = 0; j < maze[i].length; j++)
-                        labyrinth[i][j] = Integer.parseInt(maze[i][j]);
-            } catch (IOException ioe) {
-                ioe.printStackTrace();
-            }
-        } catch (FileNotFoundException fnfe) {
-            System.out.println("File not found.Please insert a new filename path");
-            generateLabyrinth(readFile());
-        }
-    }
 
     /**
      * set 2 random values as the width and height of the maze between the min and the max params
@@ -266,13 +229,13 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
             break;
             case 2: {//S-SE F-NV
                 startCell[0] = height - 1;
-                startCell[1] =  width - 1;
+                startCell[1] = width - 1;
                 finishCell[0] = 0;
                 finishCell[1] = 0;
             }
             break;
             case 3: {//S-SV F-NE
-                startCell[0] = height-1;
+                startCell[0] = height - 1;
                 startCell[1] = 0;
                 finishCell[0] = 0;
                 finishCell[1] = width - 1;
@@ -288,13 +251,12 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
 
     /**
      * the random maze generator method using Rosseta code
-     *
-     * @param min
-     * @param max
      */
     @Override
-    public void generateLabyrinth(int min, int max) {
-        randomSize(min, max);
+    public void generateLabyrinth() {
+        System.out.println("Insert the minimum and the maximum values for the labyrinth dimensions:");
+        Scanner keyboard = new Scanner(System.in);
+        randomSize(keyboard.nextInt(), keyboard.nextInt());
         RosettaCodeLabyrinthGenerator RCLG = new RosettaCodeLabyrinthGenerator(height, width);
         this.labyrinth = RCLG.parseToInteger();
         this.height = labyrinth.length;

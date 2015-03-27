@@ -7,22 +7,19 @@ import labyrinth.observer.LabyrinthObserver;
  */
 public interface LabyrinthSolver<T> {
 
-    public T nextCellToExplore(char move, T cell);
+    public int[] nextCellToExplore(char move, int[] cell);
 
     public char readNextMove();
 
-    public void interactiveSolve();
-    public void solveDFS();
-    public void solveBFS();
-    public void solveRecursive();
+    public void solve();
 
-    public T down(T cell);
+    public int[] down(int[] cell);
 
-    public T up(T cell);
+    public int[] up(int[] cell);
 
-    public T right(T cell);
+    public int[] right(int[] cell);
 
-    public T left(T cell);
+    public int[] left(int[] cell);
 
     /**
      * method to register observer
@@ -48,12 +45,16 @@ public interface LabyrinthSolver<T> {
      */
     public void notifyObservers();
 
+
     /**
-     * method to get updates from subject
-     *
-     * @param observer
+     * updates the view class with the model
+     */
+    public void updateView();
+
+    /**
+     * tests if the maze have been solved
      * @return
      */
-    public Object getUpdate(LabyrinthObserver observer);
+    public boolean isSolved();
 
 }

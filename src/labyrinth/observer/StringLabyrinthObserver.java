@@ -1,15 +1,14 @@
 package labyrinth.observer;
 
-import labyrinth.controller.IntegerLabyrinthSolver;
 import labyrinth.controller.LabyrinthSolver;
+import labyrinth.controller.StringLabyrinthSolver;
 
 /**
- * Created by Cornelius on 24.03.2015.
+ * Created by Cornelius on 27.03.2015.
  */
-public class IntegerLabyrinthObserver implements LabyrinthObserver<IntegerLabyrinthSolver> {
-
+public class StringLabyrinthObserver implements LabyrinthObserver<StringLabyrinthSolver> {
     /**
-     * method to update
+     * method to update the observer, used by subject
      */
     @Override
     public void update() {

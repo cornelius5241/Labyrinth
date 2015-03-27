@@ -31,7 +31,7 @@ public class IntegerLabyrinthView implements LabyrinthView<IntegerLabyrinth> {
      */
     @Override
     public void show(IntegerLabyrinth labyrinthModel) {
-        for (int j = 0; j < labyrinthModel.getHeight(); j++)
+        for (int j = 0; j < labyrinthModel.getWidth(); j++)
             System.out.print("-~");
         System.out.println();
         for (int i = 0; i < labyrinthModel.getHeight(); i++) {
