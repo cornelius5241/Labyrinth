@@ -6,22 +6,19 @@ import labyrinth.observer.LabyrinthObserver;
 import labyrinth.view.IntegerLabyrinthView;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by Cornelius on 24.03.2015.
  */
 public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Serializable {
 
-    private final LabyrinthObserver observer = new IntegerLabyrinthObserver();
+    private List<LabyrinthObserver> observers = new ArrayList<LabyrinthObserver>();
     private IntegerLabyrinth model;
     private IntegerLabyrinthView view;
     private boolean solved;
     private Map<Integer, Integer> solvingPath;
     private int[] startCell;
-    private boolean changed;
 
     /**
      * Constructor with 2 params
@@ -34,6 +31,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
         this.view = view;
         this.solved = false;
         this.startCell = new int[2];
+        this.register(new IntegerLabyrinthObserver(this));
     }
 
     /**
@@ -44,6 +42,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
         this.view = new IntegerLabyrinthView();
         this.solved = false;
         this.startCell = new int[2];
+        this.register(new IntegerLabyrinthObserver(this));
     }
 
     /**
@@ -56,6 +55,7 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
         this.view = new IntegerLabyrinthView();
         this.solved = false;
         this.startCell = new int[2];
+        this.register(new IntegerLabyrinthObserver(this));
     }
 
     /**
@@ -145,15 +145,15 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
                 } else {
                     addPath(currentCell);
                 }
-                //notify observer ->print
+                this.notifyObservers(1);
                 previousCell[0] = currentCell[0];
                 previousCell[1] = currentCell[1];
-                this.updateView();
+
             } else System.out.println("Wrong command ,try again");
         }
         System.out.println("Congratulations:You have finished the labyrinth. Zeus would be proud!");
         save();
-        //processSolution
+        this.notifyObservers(2);
     }
 
     /**
@@ -294,7 +294,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
      */
     @Override
     public void register(LabyrinthObserver observer) {
-
+        if (!observers.contains(observer))
+            observers.add(observer);
     }
 
     /**
@@ -304,7 +305,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
      */
     @Override
     public void unregister(LabyrinthObserver observer) {
-
+        if (observers.contains(observer))
+            observers.remove(observer);
     }
 
     /**
@@ -312,16 +314,31 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
      */
     @Override
     public void unregister() {
-
+        observers.clear();
     }
 
     /**
      * method to notify observers of change
      */
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(int type) {
+        switch (type) {
+            case 1: {
+                for (LabyrinthObserver obs : observers)
+                    obs.processCell();
+            }
+            break;
+            case 2: {
+                for (LabyrinthObserver obs : observers) {
+                    obs.processSolution();
+                }
+
+            }
+            break;
+            default:
+                break;
+
+        }
 
     }
-
-
 }

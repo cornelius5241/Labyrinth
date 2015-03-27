@@ -16,11 +16,10 @@ import java.util.List;
  */
 public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, Serializable {
 
-    private final LabyrinthObserver observer = new StringLabyrinthObserver();
+    private List<LabyrinthObserver> observers = new ArrayList<LabyrinthObserver>();
     private StringLabyrinth model;
     private StringLabyrinthView view;
     private boolean solved;
-    private boolean changed;
     private List<char[]> solutions = new ArrayList<char[]>();
     private char[] path;
     private int position = 0;
@@ -35,6 +34,7 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
         this.model = model;
         this.view = view;
         this.solved = false;
+        this.register(new StringLabyrinthObserver(this));
     }
 
     /**
@@ -44,6 +44,7 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
         this.model = new StringLabyrinth(filename);
         this.view = new StringLabyrinthView();
         this.solved = false;
+        this.register(new StringLabyrinthObserver(this));
     }
 
     /**
@@ -55,6 +56,7 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
         this.model = model;
         this.view = new StringLabyrinthView();
         this.solved = false;
+        this.register(new StringLabyrinthObserver(this));
     }
 
     /**
@@ -163,30 +165,24 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
      * @param cell the cell from where we start
      */
     public void solveRecursively(int[] cell, char direction) {
-
         if (!validCoordinates(cell)) {
             return;
         }
-
         path[position++] = direction;
-
         if (this.model.isFinishAt(cell[0], cell[1])) {
-            updateView();//processSolution
+            notifyObservers(2); //processSolution
             System.out.println("Solved");
             savePath(path, 0, position - 1);
         }
-
         if ((this.model.isFreeAt(cell[0], cell[1])) || (this.model.isStartAt(cell[0], cell[1]))) {
             this.model.getLabyrinth()[cell[0]][cell[1]] = '?';  // cell has been processed
-            //updateView();//processCell
+            notifyObservers(1);
             solveRecursively(down(cell), 'd');
             solveRecursively(right(cell), 'r');
             solveRecursively(up(cell), 'u');
             solveRecursively(left(cell), 'l');
-
             this.model.getLabyrinth()[cell[0]][cell[1]] = this.model.getROOM();  // cell has been processed
         }
-        //path[position]='\0';
         position--;
     }
 
@@ -198,8 +194,6 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
         for (char[] sol : solutions) {
             System.out.println(sol);
         }
-
-
     }
 
     @Override
@@ -235,39 +229,57 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
     }
 
     /**
-     * method to register observer
+     * method to register an observer to the internal list of observers
      *
      * @param observer
      */
     @Override
     public void register(LabyrinthObserver observer) {
-
+        if (!observers.contains(observer))
+            observers.add(observer);
     }
 
     /**
-     * method to unregister observer
+     * method to unregister an observer from the internal list of observers
      *
      * @param observer
      */
     @Override
     public void unregister(LabyrinthObserver observer) {
-
+        if (observers.contains(observer))
+            observers.remove(observer);
     }
 
     /**
-     * method to unregister all observers
+     * method to unregister all observers from the internal list of observers
      */
     @Override
     public void unregister() {
-
+        observers.clear();
     }
 
     /**
      * method to notify observers of change
      */
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(int type) {
+        switch (type) {
+            case 1: {
+                for (LabyrinthObserver obs : observers)
+                    obs.processCell();
+            }
+            break;
+            case 2: {
+                for (LabyrinthObserver obs : observers) {
+                    obs.processSolution();
+                }
 
+            }
+            break;
+            default:
+                break;
+
+        }
     }
 
 

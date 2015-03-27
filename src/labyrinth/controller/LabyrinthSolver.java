@@ -43,7 +43,7 @@ public interface LabyrinthSolver<T> {
     /**
      * method to notify observers of change
      */
-    public void notifyObservers();
+    public void notifyObservers(int type);
 
 
     /**
