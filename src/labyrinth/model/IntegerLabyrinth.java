@@ -1,14 +1,15 @@
 package labyrinth.model;
 
-import labyrinth.generator.RosettaCodeLabyrinthGenerator;
+import labyrinth.generator.RecursiveLabyrinthGenerator;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  * A labyrinth.model class that uses Integers to carrying data of an implementation of a maze
  * Created by cornelius & anca on 3/22/15.
  */
-public class IntegerLabyrinth implements LabyrinthModel<Integer> {
+public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
 
     final Integer WALL = 1;
     final Integer ROOM = 0;
@@ -257,7 +258,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer> {
         System.out.println("Insert the minimum and the maximum values for the labyrinth dimensions:");
         Scanner keyboard = new Scanner(System.in);
         randomSize(keyboard.nextInt(), keyboard.nextInt());
-        RosettaCodeLabyrinthGenerator RCLG = new RosettaCodeLabyrinthGenerator(height, width);
+        RecursiveLabyrinthGenerator RCLG = new RecursiveLabyrinthGenerator(height, width);
         this.labyrinth = RCLG.parseToInteger();
         this.height = labyrinth.length;
         this.width = labyrinth[0].length;

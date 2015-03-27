@@ -2,12 +2,13 @@ package labyrinth.view;
 
 import labyrinth.model.IntegerLabyrinth;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Cornelius on 24.03.2015.
  */
-public class IntegerLabyrinthView implements LabyrinthView<IntegerLabyrinth> {
+public class IntegerLabyrinthView implements LabyrinthView<IntegerLabyrinth>, Serializable {
 
     /**
      * @param model
@@ -51,7 +52,7 @@ public class IntegerLabyrinthView implements LabyrinthView<IntegerLabyrinth> {
             }
             System.out.println();
         }
-        for (int j = 0; j < labyrinthModel.getHeight(); j++)
+        for (int j = 0; j < labyrinthModel.getWidth(); j++)
             System.out.print("-~");
         System.out.println();
     }

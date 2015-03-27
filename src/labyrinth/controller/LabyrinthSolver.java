@@ -57,4 +57,14 @@ public interface LabyrinthSolver<T> {
      */
     public boolean isSolved();
 
+    /**
+     * method used to serialize
+     */
+    public void save();
+
+    /**
+     * method used to deserialize
+     */
+    public LabyrinthSolver load();
+
 }

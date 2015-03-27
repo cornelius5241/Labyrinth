@@ -16,6 +16,6 @@ public class Main {
         StringLabyrinthSolver SLS = new StringLabyrinthSolver("src/labyrinth/resources/labyrinthIN.txt");
         SLS.updateView();
         SLS.solve();
-        SLS.updateView();
+
     }
 }

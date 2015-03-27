@@ -3,10 +3,12 @@ package labyrinth.model;
 
 import labyrinth.generator.FileLabyrinthGenerator;
 
+import java.io.Serializable;
+
 /**
  * Created by cornelius on 3/22/15.
  */
-public class StringLabyrinth implements LabyrinthModel<String> {
+public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
 
     final char WALL = '#';
     final char ROOM = 'o';
@@ -122,7 +124,7 @@ public class StringLabyrinth implements LabyrinthModel<String> {
     @Override
     public boolean isFreeAt(int x, int y) {
         try {
-            if (Character.compare(labyrinth[x][y], ROOM) == 0) return true;
+            if (labyrinth[x][y] == ROOM) return true;
             else return false;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
@@ -140,7 +142,7 @@ public class StringLabyrinth implements LabyrinthModel<String> {
     @Override
     public boolean isStartAt(int x, int y) {
         try {
-            if (Character.compare(labyrinth[x][y], START) == 0) return true;
+            if (x == startCell[0] && y == startCell[1]) return true;
             else return false;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
@@ -158,7 +160,7 @@ public class StringLabyrinth implements LabyrinthModel<String> {
     @Override
     public boolean isFinishAt(int x, int y) {
         try {
-            if (Character.compare(labyrinth[x][y], FINISH) == 0) return true;
+            if (x == finishCell[0] && y == finishCell[1]) return true;
             else return false;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");

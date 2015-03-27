@@ -6,7 +6,7 @@ import java.util.Collections;
 /**
  * Created by Cornelius on 25.03.2015.
  */
-public class RosettaCodeLabyrinthGenerator implements LabyrinthGenerator {
+public class RecursiveLabyrinthGenerator implements LabyrinthGenerator {
 
     private final int height;
     private final int width;
@@ -18,7 +18,7 @@ public class RosettaCodeLabyrinthGenerator implements LabyrinthGenerator {
      * @param height
      * @param width
      */
-    public RosettaCodeLabyrinthGenerator(int width, int height) {
+    public RecursiveLabyrinthGenerator(int width, int height) {
         System.out.println("Number of rooms for roseta code:" + height + " by " + width);
         this.height = height;
         this.width = width;

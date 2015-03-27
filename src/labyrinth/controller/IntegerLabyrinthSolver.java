@@ -5,6 +5,7 @@ import labyrinth.observer.IntegerLabyrinthObserver;
 import labyrinth.observer.LabyrinthObserver;
 import labyrinth.view.IntegerLabyrinthView;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -12,9 +13,9 @@ import java.util.Scanner;
 /**
  * Created by Cornelius on 24.03.2015.
  */
-public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
+public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Serializable {
 
-    private final LabyrinthObserver MUTEX = new IntegerLabyrinthObserver();
+    private final LabyrinthObserver observer = new IntegerLabyrinthObserver();
     private IntegerLabyrinth model;
     private IntegerLabyrinthView view;
     private boolean solved;
@@ -151,6 +152,8 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
             } else System.out.println("Wrong command ,try again");
         }
         System.out.println("Congratulations:You have finished the labyrinth. Zeus would be proud!");
+        save();
+        //processSolution
     }
 
     /**
@@ -235,6 +238,53 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]> {
             System.out.println("You can't go there, there is a wall ahead !");
             return null;
         } else return newCell;
+    }
+
+    public void save() {
+        System.out.println("Starting serializing...");
+        try {
+            writeIntLabyrinth();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public LabyrinthSolver load() {
+        System.out.println("Starting deserializing...");
+        try {
+            return readIntLabirynth();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void writeIntLabyrinth() throws IOException {
+        try {
+            FileOutputStream fileOut =
+                    new FileOutputStream("./src/com/labyrinth/resources/integerlabyrinthsolver.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(this);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved in ./src/com/labyrinth/resources/integerlabyrinthsolver.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
+
+    public LabyrinthSolver readIntLabirynth() throws IOException {
+        try {
+            FileInputStream fileIn =
+                    new FileInputStream("./src/com/labyrinth/resources/integerlabyrinthsolver.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            return (LabyrinthSolver) in.readObject();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+        return null;
     }
 
     /**

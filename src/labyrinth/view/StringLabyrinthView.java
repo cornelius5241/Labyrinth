@@ -2,12 +2,13 @@ package labyrinth.view;
 
 import labyrinth.model.StringLabyrinth;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Cornelius on 27.03.2015.
  */
-public class StringLabyrinthView implements LabyrinthView<StringLabyrinth> {
+public class StringLabyrinthView implements LabyrinthView<StringLabyrinth>, Serializable {
     /**
      * @param model
      * @return the string representation of the model
@@ -36,21 +37,21 @@ public class StringLabyrinthView implements LabyrinthView<StringLabyrinth> {
         for (int i = 0; i < model.getHeight(); i++) {
             System.out.print("|");
             for (int j = 0; j < model.getWidth(); j++) {
-                if (model.isFreeAt(i, j))
-                    System.out.print(" |");
-                else if (model.isWallAt(i, j)) {
-                    System.out.print("#|");
-                } else if (model.isStartAt(i, j)) {
+                if (model.isStartAt(i, j)) {
                     System.out.print("S|");
+                } else if (model.isWallAt(i, j)) {
+                    System.out.print("#|");
+                } else if (model.isFreeAt(i, j)) {
+                    System.out.print(" |");
                 } else if (model.isFinishAt(i, j)) {
                     System.out.print("F|");
                 } else if (model.isPathAt(i, j)) {
                     System.out.print("*|");
-                }
+                } else System.out.print("?|");
             }
             System.out.println();
         }
-        for (int j = 0; j < model.getHeight(); j++)
+        for (int j = 0; j < model.getWidth(); j++)
             System.out.print("--");
         System.out.println();
     }
