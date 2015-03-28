@@ -1,4 +1,4 @@
-package labyrinth.model;
+package labyrinth.logic;
 
 /**
  * Interface labyrinth.model class for carrying data of a maze(labyrinth)
@@ -9,12 +9,12 @@ public interface LabyrinthModel<T> {
     /**
      * @return the number of rows in the maze
      */
-    public int getHeight();
+    int getHeight();
 
     /**
      * @return the number of columns in the maze
      */
-    public int getWidth();
+    int getWidth();
 
     /**
      * tests if the cell at coordinates (x,y) is free (a room of the maze)
@@ -23,7 +23,7 @@ public interface LabyrinthModel<T> {
      * @param y
      * @return true if so , false if not
      */
-    public boolean isFreeAt(int x, int y);
+    boolean isFreeAt(int x, int y);
 
     /**
      * tests if the cell at coordinates (x,y) is a the start position
@@ -32,7 +32,7 @@ public interface LabyrinthModel<T> {
      * @param y
      * @return true if so , false if not
      */
-    public boolean isStartAt(int x, int y);
+    boolean isStartAt(int x, int y);
 
     /**
      * tests if the cell at coordinates (x,y) is the finish position
@@ -41,7 +41,7 @@ public interface LabyrinthModel<T> {
      * @param y
      * @return true if so , false if not
      */
-    public boolean isFinishAt(int x, int y);
+    boolean isFinishAt(int x, int y);
 
     /**
      * tests if the cell at coordinates (x,y) is a path for solver of the labyrinth
@@ -50,7 +50,7 @@ public interface LabyrinthModel<T> {
      * @param y
      * @return true if so , false if not
      */
-    public boolean isPathAt(int x, int y);
+    boolean isPathAt(int x, int y);
 
     /**
      * tests if the cell at coordinates (x,y) is a wall
@@ -59,23 +59,23 @@ public interface LabyrinthModel<T> {
      * @param y
      * @return true if so , false if not
      */
-    public boolean isWallAt(int x, int y);
+    boolean isWallAt(int x, int y);
 
     /**
      * @return the coordinates of the starting cell of the maze
      */
-    public int[] getStartCell();
+    int[] getStartCell();
 
     /**
      * @return the coordinates of the finishing cell of the maze
      */
-    public int[] getFinishCell();
+    int[] getFinishCell();
 
 
     /**
      * generates a  maze
      *
      */
-    public void generateLabyrinth();
+    void generateLabyrinth();
 
 }

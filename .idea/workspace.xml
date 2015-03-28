@@ -7,15 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95fa875f-8dfa-4923-a3d8-ff29d743b81a" name="Default" comment="tot brici">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Labyrinth_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/labyrinth/resources/stringlabyrinthsolver.ser" />
+      <change type="DELETED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\.idea\artifacts\Labyrinth_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\generator\PrimeLabyrinthGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\manifest.mf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java" afterPath="$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java" afterPath="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java" afterPath="$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java" afterPath="$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java" afterPath="$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java" afterPath="$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java" afterPath="$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/view/IntegerLabyrinthView.java" afterPath="$PROJECT_DIR$/src/labyrinth/view/IntegerLabyrinthView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/main/Main.java" afterPath="$PROJECT_DIR$/src/labyrinth/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java" afterPath="$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java" afterPath="$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/observer/StringLabyrinthObserver.java" afterPath="$PROJECT_DIR$/src/labyrinth/observer/StringLabyrinthObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java" afterPath="$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/labyrinth/view/StringLabyrinthView.java" afterPath="$PROJECT_DIR$/src/labyrinth/view/StringLabyrinthView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\controller\LabyrinthSolver.java" afterPath="$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\generator\LabyrinthGenerator.java" afterPath="$PROJECT_DIR$/src/labyrinth/logic/LabyrinthGenerator.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\model\LabyrinthModel.java" afterPath="$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\observer\LabyrinthObserver.java" afterPath="$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java" />
+      <change type="MOVED" beforePath="D:\UAIC - Computer Science\UAIC\AnII-Sem2\PA-Java\Labyrinth\src\labyrinth\view\LabyrinthView.java" afterPath="$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java" />
     </list>
     <ignored path="Labyrinth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,105 +50,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IntegerLabyrinthSolver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LabyrinthModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegerLabyrinthSolver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13051823">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="160" column="53" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
               <folding>
-                <element signature="e#452#471#0" expanded="true" />
-                <element signature="e#1853#1854#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#2026#2027#0" expanded="true" />
-                <element signature="e#2055#2056#0" expanded="true" />
-                <element signature="e#9855#9856#0" expanded="true" />
-                <element signature="e#9888#9889#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#489#508#0" expanded="true" />
+                <element signature="e#1890#1891#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
+                <element signature="e#2063#2064#0" expanded="true" />
+                <element signature="e#2092#2093#0" expanded="true" />
+                <element signature="e#9886#9887#0" expanded="true" />
+                <element signature="e#9919#9920#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringLabyrinthObserver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/StringLabyrinthObserver.java">
+      <file leaf-file-name="Directions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/Directions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#595#596#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringLabyrinthSolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="57" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="57" />
-              <folding>
-                <element signature="e#556#575#0" expanded="true" />
-                <element signature="e#1896#1897#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
-                <element signature="e#2069#2070#0" expanded="true" />
-                <element signature="e#2098#2099#0" expanded="true" />
-                <element signature="e#7268#7269#0" expanded="true" />
-                <element signature="e#7301#7302#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabyrinthSolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerLabyrinth.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+      <file leaf-file-name="BasicLabyrinthGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="78" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="78" />
+              <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
               <folding>
-                <element signature="e#2492#2493#0" expanded="true" />
-                <element signature="e#2542#2543#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegerLabyrinthObserver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding>
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabyrinthObserver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,26 +105,47 @@
         <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#788#789#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1161#1162#0" expanded="true" />
-                <element signature="e#2627#2628#0" expanded="true" />
-                <element signature="e#2656#2657#0" expanded="true" />
-                <element signature="e#2764#2765#0" expanded="true" />
-                <element signature="e#2792#2793#0" expanded="true" />
-                <element signature="e#5384#5385#0" expanded="true" />
-                <element signature="e#5416#5417#0" expanded="true" />
-                <element signature="e#5547#5548#0" expanded="true" />
-                <element signature="e#5580#5581#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileLabyrinthGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecursiveLabyrinthGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="123" column="54" selection-start-line="123" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <folding>
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#4801#4802#0" expanded="true" />
+                <element signature="e#4840#4841#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegerLabyrinth.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,18 +154,21 @@
         <entry file="file://$PROJECT_DIR$/src/labyrinth/view/IntegerLabyrinthView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="90" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+              <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringLabyrinthView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labyrinth/view/StringLabyrinthView.java">
+      <file leaf-file-name="StringLabyrinthSolver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
-              <folding />
+              <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#593#612#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -229,16 +214,12 @@
         <option value="$PROJECT_DIR$/src/labyrinth/generator/Directions.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/LabyrinthGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/BasicGenerator.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/RosettaCodeLabyrinthGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/labyrinth.txt" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrintGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinhtGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/main/Main.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/resources/labyrinthIN.txt" />
         <option value="$PROJECT_DIR$/src/labyrinth/resources/MyComparator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java" />
@@ -249,8 +230,12 @@
         <option value="$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/observer/StringLabyrinthObserver.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java" />
-        <option value="$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java" />
         <option value="$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java" />
+        <option value="$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java" />
       </list>
     </option>
   </component>
@@ -286,6 +271,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -464,6 +451,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labyrinth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -492,9 +501,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -775,7 +782,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427490485059</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tot brici">
+      <created>1427494873875</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1427494873875</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -804,16 +817,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.101071976" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114854515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.143951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25113463" sideWeight="0.49889624" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25113463" sideWeight="0.49889624" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -821,11 +833,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32006127" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.101071976" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7672282" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -891,21 +904,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2492#2493#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#593#612#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -914,11 +919,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
@@ -926,19 +933,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,15 +951,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,10 +968,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2492#2493#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -973,11 +976,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
@@ -985,27 +990,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,11 +1015,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -1025,27 +1029,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,11 +1054,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
@@ -1065,27 +1068,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,13 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/Directions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/labyrinth/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1131,57 +1124,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/PrimeLabyrinthGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/LabyrinthModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/LabyrinthGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="9" selection-start-line="79" selection-start-column="7" selection-end-line="83" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/LabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,23 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3319672">
           <caret line="754" column="0" selection-start-line="754" selection-start-column="0" selection-end-line="754" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,72 +1160,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#2627#2628#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
-            <element signature="e#5384#5385#0" expanded="true" />
-            <element signature="e#5416#5417#0" expanded="true" />
-            <element signature="e#5547#5548#0" expanded="true" />
-            <element signature="e#5580#5581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/labyrinth/view/StringLabyrinthView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="78" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="78" />
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="e#2492#2493#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/IntegerLabyrinthView.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/resources/stringlabyrinthsolver.ser">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="90" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/LabyrinthSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/LabyrinthObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1299,27 +1210,111 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/observer/IntegerLabyrinthObserver.java">
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/logic/LabyrinthModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/FileLabyrinthGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
           <folding>
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/view/IntegerLabyrinthView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/IntegerLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/resources/integerlabyrinthsolver.ser">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="53" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#489#508#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#2063#2064#0" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
+            <element signature="e#9886#9887#0" expanded="true" />
+            <element signature="e#9919#9920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/Directions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/BasicLabyrinthGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/generator/RecursiveLabyrinthGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="54" selection-start-line="123" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#4801#4802#0" expanded="true" />
+            <element signature="e#4840#4841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labyrinth/model/StringLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1327,31 +1322,10 @@
     <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/StringLabyrinthSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="57" />
+          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
           <folding>
-            <element signature="e#556#575#0" expanded="true" />
-            <element signature="e#1896#1897#0" expanded="true" />
-            <element signature="e#1928#1929#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2098#2099#0" expanded="true" />
-            <element signature="e#7268#7269#0" expanded="true" />
-            <element signature="e#7301#7302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labyrinth/controller/IntegerLabyrinthSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13051823">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#452#471#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#2026#2027#0" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#9855#9856#0" expanded="true" />
-            <element signature="e#9888#9889#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#593#612#0" expanded="true" />
           </folding>
         </state>
       </provider>

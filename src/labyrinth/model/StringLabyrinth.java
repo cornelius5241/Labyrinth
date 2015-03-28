@@ -2,6 +2,7 @@ package labyrinth.model;
 
 
 import labyrinth.generator.FileLabyrinthGenerator;
+import labyrinth.logic.LabyrinthModel;
 
 import java.io.Serializable;
 
@@ -124,8 +125,7 @@ public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
     @Override
     public boolean isFreeAt(int x, int y) {
         try {
-            if (labyrinth[x][y] == ROOM) return true;
-            else return false;
+            return labyrinth[x][y] == ROOM;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
             return false;
@@ -142,8 +142,7 @@ public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
     @Override
     public boolean isStartAt(int x, int y) {
         try {
-            if (x == startCell[0] && y == startCell[1]) return true;
-            else return false;
+            return x == startCell[0] && y == startCell[1];
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
             return false;
@@ -160,8 +159,7 @@ public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
     @Override
     public boolean isFinishAt(int x, int y) {
         try {
-            if (x == finishCell[0] && y == finishCell[1]) return true;
-            else return false;
+            return x == finishCell[0] && y == finishCell[1];
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
             return false;
@@ -178,8 +176,7 @@ public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
     @Override
     public boolean isPathAt(int x, int y) {
         try {
-            if (Character.compare(labyrinth[x][y], PATH) == 0) return true;
-            else return false;
+            return Character.compare(labyrinth[x][y], PATH) == 0;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
             return false;
@@ -196,8 +193,7 @@ public class StringLabyrinth implements LabyrinthModel<String>, Serializable {
     @Override
     public boolean isWallAt(int x, int y) {
         try {
-            if (Character.compare(labyrinth[x][y], WALL) == 0) return true;
-            else return false;
+            return Character.compare(labyrinth[x][y], WALL) == 0;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Incorrect coordinates");
             return false;

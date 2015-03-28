@@ -1,6 +1,7 @@
 package labyrinth.model;
 
 import labyrinth.generator.RecursiveLabyrinthGenerator;
+import labyrinth.logic.LabyrinthModel;
 
 import java.io.Serializable;
 import java.util.Scanner;
@@ -87,8 +88,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
      */
     @Override
     public boolean isFreeAt(int x, int y) {//first true => 2nd || first false =>third
-        if (labyrinth[x][y] == null ? ROOM == null : labyrinth[x][y].equals(ROOM)) return true;
-        else return false;
+        return labyrinth[x][y] == null ? ROOM == null : labyrinth[x][y].equals(ROOM);
     }
 
     /**
@@ -107,8 +107,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
      */
     @Override
     public boolean isStartAt(int x, int y) {
-        if (labyrinth[x][y] == null ? START == null : labyrinth[x][y].equals(START)) return true;
-        else return false;
+        return labyrinth[x][y] == null ? START == null : labyrinth[x][y].equals(START);
     }
 
     /**
@@ -119,8 +118,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
     @Override
     public boolean isWallAt(int x, int y) {
         try {
-            if (labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL)) return true;
-            else return false;
+            return labyrinth[x][y] == null ? WALL == null : labyrinth[x][y].equals(WALL);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Can't go there, you might fall");
             return true;
@@ -135,8 +133,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
     @Override
     public boolean isPathAt(int x, int y) {
         try {
-            if (labyrinth[x][y] == null ? PATH == null : labyrinth[x][y].equals(PATH)) return true;
-            else return false;
+            return labyrinth[x][y] == null ? PATH == null : labyrinth[x][y].equals(PATH);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Can't go there, you might fall");
             return false;
@@ -163,8 +160,7 @@ public class IntegerLabyrinth implements LabyrinthModel<Integer>, Serializable {
      */
     @Override
     public boolean isFinishAt(int x, int y) {
-        if (labyrinth[x][y] == null ? FINISH == null : labyrinth[x][y].equals(FINISH)) return true;
-        else return false;
+        return labyrinth[x][y] == null ? FINISH == null : labyrinth[x][y].equals(FINISH);
     }
 
     /**

@@ -1,6 +1,7 @@
 package labyrinth.observer;
 
 import labyrinth.controller.IntegerLabyrinthSolver;
+import labyrinth.logic.LabyrinthObserver;
 
 /**
  * Created by Cornelius on 24.03.2015.

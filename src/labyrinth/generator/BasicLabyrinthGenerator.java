@@ -1,9 +1,13 @@
 package labyrinth.generator;
 
+import labyrinth.logic.LabyrinthGenerator;
+
+import java.io.Serializable;
+
 /**
  * Created by Cornelius on 25.03.2015.
  */
-public class BasicLabyrinthGenerator implements LabyrinthGenerator {
+public class BasicLabyrinthGenerator implements LabyrinthGenerator, Serializable {
 
     private int height;
     private int width;

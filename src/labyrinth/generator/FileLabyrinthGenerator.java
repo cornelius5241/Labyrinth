@@ -1,12 +1,14 @@
 package labyrinth.generator;
 
+import labyrinth.logic.LabyrinthGenerator;
+
 import java.io.*;
 import java.util.Scanner;
 
 /**
  * Created by Cornelius on 27.03.2015.
  */
-public class FileLabyrinthGenerator implements LabyrinthGenerator {
+public class FileLabyrinthGenerator implements LabyrinthGenerator, Serializable {
 
     private int[] startCell;
     private int[] finishCell;

@@ -1,5 +1,6 @@
 package labyrinth.view;
 
+import labyrinth.logic.LabyrinthView;
 import labyrinth.model.StringLabyrinth;
 
 import java.io.Serializable;

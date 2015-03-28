@@ -1,5 +1,6 @@
 package labyrinth.main;
 
+import labyrinth.controller.IntegerLabyrinthSolver;
 import labyrinth.controller.StringLabyrinthSolver;
 
 /**
@@ -9,9 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // IntegerLabyrinthSolver ILS = new IntegerLabyrinthSolver();
-        // ILS.updateView();
-        // ILS.solve();
+        IntegerLabyrinthSolver ILS = new IntegerLabyrinthSolver();
+        ILS.updateView();
+        ILS.solve();
 
         StringLabyrinthSolver SLS = new StringLabyrinthSolver("src/labyrinth/resources/labyrinthIN.txt");
         SLS.updateView();

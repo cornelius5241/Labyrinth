@@ -1,8 +1,9 @@
 package labyrinth.controller;
 
+import labyrinth.logic.LabyrinthObserver;
+import labyrinth.logic.LabyrinthSolver;
 import labyrinth.model.IntegerLabyrinth;
 import labyrinth.observer.IntegerLabyrinthObserver;
-import labyrinth.observer.LabyrinthObserver;
 import labyrinth.view.IntegerLabyrinthView;
 
 import java.io.*;
@@ -262,12 +263,12 @@ public class IntegerLabyrinthSolver implements LabyrinthSolver<Integer[]>, Seria
     public void writeIntLabyrinth() throws IOException {
         try {
             FileOutputStream fileOut =
-                    new FileOutputStream("./src/com/labyrinth/resources/integerlabyrinthsolver.ser");
+                    new FileOutputStream("./src/labyrinth/resources/integerlabyrinthsolver");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(this);
+            out.writeObject(this.model);
             out.close();
             fileOut.close();
-            System.out.println("Serialized data is saved in ./src/com/labyrinth/resources/integerlabyrinthsolver.ser");
+            System.out.println("Serialized data is saved in ./src/labyrinth/resources/integerlabyrinthsolver.ser");
         } catch (IOException i) {
             i.printStackTrace();
         }

@@ -1,7 +1,8 @@
 package labyrinth.controller;
 
+import labyrinth.logic.LabyrinthObserver;
+import labyrinth.logic.LabyrinthSolver;
 import labyrinth.model.StringLabyrinth;
-import labyrinth.observer.LabyrinthObserver;
 import labyrinth.observer.StringLabyrinthObserver;
 import labyrinth.resources.MyComparator;
 import labyrinth.view.StringLabyrinthView;
@@ -107,12 +108,12 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
     public void writeIntLabyrinth() throws IOException {
         try {
             FileOutputStream fileOut =
-                    new FileOutputStream("./src/com/labyrinth/resources/stringlabyrinthsolver.ser");
+                    new FileOutputStream("./src/labyrinth/resources/stringlabyrinthsolver.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(this);
+            out.writeObject(this.model);
             out.close();
             fileOut.close();
-            System.out.println("Serialized data is saved in ./src/com/labyrinth/resources/stringlabyrinthsolver.ser");
+            System.out.println("Serialized data is saved in ./src/labyrinth/resources/stringlabyrinthsolver.ser");
         } catch (IOException i) {
             i.printStackTrace();
         }
@@ -121,7 +122,7 @@ public class StringLabyrinthSolver implements LabyrinthSolver<StringLabyrinth>, 
     public LabyrinthSolver readIntLabirynth() throws IOException {
         try {
             FileInputStream fileIn =
-                    new FileInputStream("./src/com/labyrinth/resources/stringlabyrinthsolver.ser");
+                    new FileInputStream("./src/labyrinth/resources/stringlabyrinthsolver.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
             return (LabyrinthSolver) in.readObject();
         } catch (ClassNotFoundException e) {
